@@ -1,10 +1,6 @@
 # encoding: utf-8
 
 import sys
-sys.path.append("..")
-
-# from gevent import monkey
-# monkey.patch_all()
 
 from flask import Flask, request, Response, jsonify, render_template, g, redirect
 from database import MYSQL

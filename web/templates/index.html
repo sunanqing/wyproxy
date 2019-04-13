@@ -71,7 +71,7 @@
 
 {% for record in records %}
 <tr>
-<td><a href="/r?id={{record.id}}" target="_blank">#{{record.id}}</a></td>
+<td><a href="/r?id={{record.id}}" >#{{record.id}}</a></td>
 <td>{{record.host | truncate(40, True)}}:{{record.port}}</td>
 <td>{{record.method}}</td>
 <td>{{record.path | truncate(40, True)}}</td>
@@ -79,7 +79,7 @@
 <td>{{record.status_code}}</td>
 <td>{{record.date_start}}</td>
 <td>
-<a class="btn btn-default btn-xs" href="/r?id={{record.id}}" target="_blank" role="button">查看回放</a>
+<a class="btn btn-default btn-xs" href="/r?id={{record.id}}"  role="button">查看回放</a>
 <a class="btn btn-danger btn-xs" href="/del?id={{record.id}}" role="button">删除</a></td>
     </tr>
 {% endfor %}

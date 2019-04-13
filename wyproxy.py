@@ -13,7 +13,7 @@ from utils.handle import wyproxy_request_handle, wyproxy_response_handle
 from utils.mysql import MysqlInterface
 
 logging.basicConfig(
-    level=logging.INFO, # filename='/tmp/wyproxy.log',
+    level=logging.INFO,  #filename='./wyproxy.log',
     format='%(asctime)s [%(levelname)s] %(message)s',
 )
 
@@ -57,7 +57,6 @@ def start_server(proxy_port, proxy_mode, unsave_data):
 
     if proxy_mode == 'http':
         mode = 'regular'
-
     opts = options.Options(
         listen_port=port,
         mode=mode,
@@ -129,7 +128,7 @@ if __name__ == '__main__':
     parser.add_argument("-us","--unsave",action="store_true",required=False,
         help="Do not save records to MySQL server")
     args = parser.parse_args()
-
+    print(args)
     try:
         run(args)
     except KeyboardInterrupt:
