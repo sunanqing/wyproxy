@@ -60,7 +60,7 @@ def start_server(proxy_port, proxy_mode, unsave_data):
     opts = options.Options(
         listen_port=port,
         mode=mode,
-        cadir="./ssl/",
+        # cadir="./ssl/",
         )
 
     config = proxy.ProxyConfig(opts)
